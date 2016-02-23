@@ -137,6 +137,7 @@ http://cabinet.nurline.kz/php/server.php
 	command:'cams',
 	method:'fav',
 	token:[token],
+	fav:[0 - убрать из избранного/1 - добавить],
 	id:[id камеры (не uuid)],
 }
 ```
