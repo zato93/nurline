@@ -234,7 +234,7 @@ http://cabinet.nurline.kz/php/server.php
 {
 	"command": "users",
 	"method": "info",
-	"token": "3a48f71ac3841b67e45bddc61f7eb81b"
+	"token": ""
 }
 ```
 #### Ответ:
