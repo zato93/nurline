@@ -3,7 +3,7 @@
 URL: http://cabinet.nurline.kz/php/reg.php
 
 #### Запрос:
-```json
+```
 {
 	method: 'register',
 	email: [email]',
@@ -13,7 +13,7 @@ URL: http://cabinet.nurline.kz/php/reg.php
 }
 ```
 #### Ответ:
-```json
+```
 {
 	status:[0 - email уже зарегистрирован, 1 - успешно]
 }
@@ -27,7 +27,7 @@ URL: http://cabinet.nurline.kz/php/reg.php
 # Логин
 URL:http://cabinet.nurline.kz/php/reg.php
 #### Запрос:
-```json
+```
 {
 	method:'login',
 	email:'email',
@@ -36,7 +36,7 @@ URL:http://cabinet.nurline.kz/php/reg.php
 
 ```
 #### Ответ:
-```json
+```
 {
 	status:[0 - неверный логин/пароль, 1-email не подтвержден, 2 - успешный вход],
 	token:[token]
@@ -50,7 +50,7 @@ http://cabinet.nurline.kz/php/server.php
 
 # Получение списков камер и объектов
 #### Запрос:
-```json
+```
 {
 	command:'cams',
 	method:'get',
@@ -59,7 +59,7 @@ http://cabinet.nurline.kz/php/server.php
 
 ```
 #### Ответ:
-```json
+```
 {
 	status:[статус (0 - ошибка, 1 - успешно)],
 	objects:[{
@@ -90,7 +90,7 @@ http://cabinet.nurline.kz/php/server.php
 ---------
 # Просмотр камеры
 #### Запрос:
-```json
+```
 {
 	command:'api',
 	method:'view_cam',
@@ -101,7 +101,7 @@ http://cabinet.nurline.kz/php/server.php
 
 ```
 #### Ответ:
-```json (Почти все как у мегакама, за исключением значения timings, это временные интервалы для архива камервы)
+``` (Почти все как у мегакама, за исключением значения timings, это временные интервалы для архива камервы)
 {
 	archive_enabled: [true/false]
 	archive_hls_template: "http://5.251.235.199/hls/9788_low.m3u8?auth=1930dc65c5557f747356e5373684a96c"
@@ -131,7 +131,7 @@ http://cabinet.nurline.kz/php/server.php
 ---------
 # Добавление в избранное
 #### Запрос:
-```json
+```
 {
 	command:'cams',
 	method:'fav',
@@ -140,7 +140,7 @@ http://cabinet.nurline.kz/php/server.php
 }
 ```
 #### Ответ:
-```json
+```
 {
 	status:[статус (0 - ошибка, 1 - успешно)]
 }
@@ -149,7 +149,7 @@ http://cabinet.nurline.kz/php/server.php
 ---------
 # Добавление заметки к камере
 #### Запрос:
-```json
+```
 {
 	command:'cams',
 	method:'note',
@@ -159,7 +159,7 @@ http://cabinet.nurline.kz/php/server.php
 }
 ```
 #### Ответ:
-```json
+```
 {
 	status:[статус (0 - ошибка, 1 - успешно)]
 }
@@ -168,7 +168,7 @@ http://cabinet.nurline.kz/php/server.php
 ---------
 # Добавление заметки к объекту
 #### Запрос:
-```json
+```
 {
 	command:'cams',
 	method:'object_note',
@@ -178,7 +178,7 @@ http://cabinet.nurline.kz/php/server.php
 }
 ```
 #### Ответ:
-```json
+```
 {
 	status:[статус (0 - ошибка, 1 - успешно)]
 }
@@ -187,7 +187,7 @@ http://cabinet.nurline.kz/php/server.php
 ---------
 # Добавление объекта по PIN коду
 #### Запрос:
-```json
+```
 {
 	command:'cams',
 	method:'addByPin',
@@ -196,7 +196,7 @@ http://cabinet.nurline.kz/php/server.php
 }
 ```
 #### Ответ:
-```json
+```
 {
 	status:[статус (0 - ошибка, 1 - успешно)],
 	object:{
@@ -229,7 +229,7 @@ http://cabinet.nurline.kz/php/server.php
 ---------
 # Информация акаунта
 #### Запрос:
-```json
+```
 {
 	"command": "users",
 	"method": "info",
@@ -237,7 +237,7 @@ http://cabinet.nurline.kz/php/server.php
 }
 ```
 #### Ответ:
-```json
+```
 {
 	"email": "me@blackcat95.ru",
 	"name": "",
@@ -256,7 +256,7 @@ http://cabinet.nurline.kz/php/server.php
 ---------
 # Настройки акаунта (имя/телефон)
 #### Запрос:
-```json
+```
 {
 	command:'users',
 	method:'save',
@@ -266,7 +266,7 @@ http://cabinet.nurline.kz/php/server.php
 }
 ```
 #### Ответ:
-```json
+```
 {
 	status:[статус (0 - ошибка, 1 - успешно)]
 }
@@ -274,12 +274,12 @@ http://cabinet.nurline.kz/php/server.php
 ---------
 # Изменить пароль
 #### regex для пароля 
-```json
+```
 /(?=^.{6,}$)(?=.*\d)(?=.*[A-Za-z]).*$/
 ```
 
 #### Запрос:
-```json
+```
 {
 	command:'password',
 	method:'change',
@@ -288,7 +288,7 @@ http://cabinet.nurline.kz/php/server.php
 }
 ```
 #### Ответ:
-```json
+```
 {
 	status:[статус (0 - пароль не соответвует regex, 1 - изменен)]
 }
